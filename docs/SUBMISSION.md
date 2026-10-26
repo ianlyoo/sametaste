@@ -3,7 +3,7 @@
 Your card statement, same taste, for less.
 
 - **Live demo:** https://qloo-sametaste.vercel.app (no login, hosted on Vercel)
-- **Code:** <PUBLIC_REPO_URL> (MIT license, `LICENSE`)
+- **Code:** https://github.com/ianlyoo/sametaste (MIT license, `LICENSE`)
 
 ## What it does
 
