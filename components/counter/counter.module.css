@@ -41,6 +41,47 @@
 :global([data-paper-under]) .top::before {
   opacity: 1;
 }
+/* owner feedback (v26): the veil fades the paper under the strip, never the strip's own text. Under a bar with a band (a wide screen's /), the
+   veil's tail below the bar lay over the band's caption (the bar is a layer above the band), so it is split at the bar's foot: the bar keeps
+   the part behind itself, and the band carries the tail beneath its own text, the same fade on one line from the bar's top to its end */
+.strip > .top::before {
+  inset: 0;
+  background: linear-gradient(color-mix(in srgb, var(--bg) 58%, transparent), color-mix(in srgb, var(--bg) 33%, transparent));
+  -webkit-mask-image: linear-gradient(#000 calc(100% - 1.4rem), rgba(0, 0, 0, 0.65));
+  mask-image: linear-gradient(#000 calc(100% - 1.4rem), rgba(0, 0, 0, 0.65));
+}
+.strip > .band {
+  position: relative;
+  isolation: isolate;
+}
+.strip > .band::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.6rem;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(color-mix(in srgb, var(--bg) 33%, transparent), color-mix(in srgb, var(--bg) 22%, transparent));
+  -webkit-backdrop-filter: blur(12px) saturate(1.08);
+  backdrop-filter: blur(12px) saturate(1.08);
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.65), transparent);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0.65), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+:global([data-paper-under]) > .strip > .band::before {
+  opacity: 1;
+}
+/* and the strip's text in a crisp dark ink with the nav's halo, on any paper (#528: the caption's light grey read faint over the frost) */
+.strip .sub,
+.strip .band :global(.lab) {
+  color: color-mix(in srgb, var(--dim) 35%, var(--ink));
+  text-shadow:
+    0 0 2px rgba(243, 239, 230, 0.9),
+    0 0 10px rgba(243, 239, 230, 0.8);
+}
 .brand {
   font-weight: 650;
   letter-spacing: -0.015em;
@@ -1006,7 +1047,8 @@
   :global([data-paper-under]) > .strip::before {
     opacity: 1;
   }
-  .strip > .top::before {
+  .strip > .top::before,
+  .strip > .band::before {
     content: none;
   }
   .band {
