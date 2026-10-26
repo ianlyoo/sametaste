@@ -47,8 +47,8 @@ your neighbourhood once, so twins are near you.
 Needs Node 24 and npm.
 
 ```bash
-git clone https://github.com/ianlyoo/qloo-sametaste.git
-cd qloo-sametaste
+git clone https://github.com/ianlyoo/sametaste.git
+cd sametaste
 npm i
 cp .env.example .env.local   # then set ANTHROPIC_API_KEY and QLOO_API_KEY, and QLOO_MOCK= (empty)
 npm run dev                  # http://localhost:3000
