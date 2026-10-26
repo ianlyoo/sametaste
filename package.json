@@ -1,0 +1,41 @@
+{
+  "name": "repo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "personas:embed": "node personas/embed.mjs",
+    "eval:bench": "tsx eval/run.ts",
+    "eval:gate": "tsx eval/gate.ts",
+    "eval:baseline": "tsx eval/baseline.ts",
+    "eval:record-demo": "tsx eval/record-demo.ts",
+    "eval:reproof": "tsx eval/reproof.ts",
+    "eval:upload-recording": "tsx eval/upload-recording.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.85",
+    "ai": "^7.0.148",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "0.186.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.186.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.0.5"
+  }
+}

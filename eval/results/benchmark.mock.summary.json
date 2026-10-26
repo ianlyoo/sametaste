@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-22T17:32:20.399Z",
+  "qlooMode": "mock",
+  "modelMode": "scripted",
+  "city": "New York, NY",
+  "merchantCount": 40,
+  "resolveRate": 0.875,
+  "systems": {
+    "llm_only": {
+      "answered": 40,
+      "hallucinationRate": 0.9,
+      "cheaperHitRate": 0.05,
+      "tasteMatch": 0.813,
+      "monthlySavingsUsd": 337.5
+    },
+    "sametaste": {
+      "answered": 35,
+      "hallucinationRate": 0,
+      "cheaperHitRate": 0.875,
+      "tasteMatch": 0.94,
+      "monthlySavingsUsd": 1515
+    }
+  },
+  "gate": {
+    "threshold": 0.6,
+    "resolveRate": 0.875,
+    "cheaperHitRate": 0.875,
+    "pass": true
+  },
+  "qlooCalls": 144
+}

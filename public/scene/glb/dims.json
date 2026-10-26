@@ -1,0 +1,7 @@
+{
+  "source": "assets3d/r5/README.md, delivered 2026-10-23 (physical metres, +Y up, pen tip at the origin)",
+  "units": "m",
+  "pen": { "length": 0.146, "radius": 0.0065, "tipOffset": 0 },
+  "cup": { "radius": 0.078, "height": 0.0721 },
+  "card": { "x": 0.0856, "y": 0.000786, "z": 0.05398 }
+}

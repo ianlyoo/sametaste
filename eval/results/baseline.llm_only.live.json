@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "setVersion": 1,
+  "generatedAt": "2026-10-22T14:00:34.442Z",
+  "system": "llm_only",
+  "modelMode": "live",
+  "model": "claude-sonnet-5-5",
+  "city": "New York, NY",
+  "merchantCount": 40,
+  "answered": 40,
+  "namedRate": 1,
+  "genericCount": 0,
+  "withNeighborhoodRate": 1,
+  "sameAsOriginalCount": 1,
+  "distinctSuggestions": 40,
+  "repeatedSuggestionRate": 0,
+  "pendingQlooKey": [
+    "hallucinationRate",
+    "cheaperHitRate",
+    "tasteMatch",
+    "monthlySavingsUsd"
+  ],
+  "costUsd": 0.02081,
+  "tokens": {
+    "input": 2034,
+    "output": 1674
+  }
+}
